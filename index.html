@@ -784,38 +784,35 @@ var SA=[
  {n:'宜兴太湖服务区',p:[31.1947,119.9055],go:116,back:155,ch:true,prov:'江苏宜兴'},
  {n:'溧阳天目湖服务区',p:[31.3847,119.5083],go:163,back:108,ch:true,prov:'江苏溧阳，约在全程中点，推荐休息'},
  {n:'溧水东庐山服务区',p:[31.6140,119.1442],go:208,back:64,ch:null,prov:'江苏南京溧水'}];
-/* 露营/过夜停车：只列核实过的。服务区过夜=过路车内休息（停车免费+公厕），不等于正规露营地。 */
+/* 露营/过夜停车：行程观光周边（牛首山/汤山等）。不含高速服务区。只列核实过的。 */
 var CAMP=[
- {id:'sa_yx',n:'宜兴太湖服务区（G25）',p:[31.1947,119.9055],
-  a:'江苏省无锡市宜兴市丁蜀镇 · 长深高速 / 宁杭高速宜兴太湖服务区（双向）',
-  fee:'停车免费（过路休息，不另收过夜费）',toilet:true,overnight:'过路车内过夜休息通常允许；勿长期占位、勿占应急/消防通道。非露营挂帐篷场地。',
-  space:'开阔：公开资料称占地约 120 余亩，有停车场、公厕、餐饮、汽修；双侧有充电桩（公开资料约 8 个，以 App 为准）',
-  dist:'距新街口约 143 km；去程距杭州约 116 km（约半程之后）',
-  tip:'适合去程/返程疲劳时车内休息；有公厕、充电。不算正规露营地。',
-  src:'https://www.icauto.com.cn/fuwuqu/215411.html · 江苏省地标 DB32/T 3522.1（服务区停车/卫生间应 24 小时）'},
- {id:'sa_tmh',n:'溧阳天目湖服务区（G25）',p:[31.3847,119.5083],
-  a:'江苏省常州市溧阳市 · 长深高速 / 宁杭高速溧阳天目湖服务区（江苏段唯一双侧服务区）',
-  fee:'停车免费（过路休息）',toilet:true,overnight:'过路车内过夜休息通常允许；勿长期占位。非露营挂帐篷场地。',
-  space:'开阔：公开资料称占地约 80 亩，南/北两区，有停车场、公共厕所、餐饮、超市、加油站、修理厂；有充电桩',
-  dist:'距新街口约 101 km；去程距杭州约 163 km（全程约中点，推荐休息点）',
-  tip:'去程中点休息首选；公厕+充电核实到公开资料。',
-  src:'https://www.icauto.com.cn/fuwuqu/215410.html · 同上地标'},
  {id:'saoy',n:'世凹桃源房车营地（牛首山）',p:[31.914281,118.721917],
   a:'南京市江宁区谷里街道周村社区世凹村（牛首山西南麓）；导航「世凹桃源」，游客接待中心后侧为营地入口',
-  fee:'公开资料称「收费相当亲民」，未找到统一价目表 → 出发前电话确认',toilet:true,overnight:'支持过夜驻营（房车营地）；需与营地确认是否接小客车过夜',
+  near:'近牛首山风景区 / 佛顶宫一带观光',
+  fee:'公开资料称「收费相当亲民」，未找到统一价目表 → 出发前电话确认',toilet:true,overnight:'支持过夜驻营（房车营地）；是否接普通小客车过夜请电话确认',
   space:'微营地：约 20 个房车停车位；有水电、淋浴、烧烤区、茶舍、儿童游乐区',
-  dist:'距新街口约 15 km（约 30–40 分钟自驾）',
+  dist:'距新街口约 15 km（约 30–40 分钟）；距市区约 8 km（介绍）',
   phone:'相关介绍页曾列 17512510326 / 15863215789（请再核实）',
-  tip:'离市区近、性价比取向。面积不大，不是「大停车场」型。',
+  tip:'离市区近、性价比取向，适合逛牛首山后过夜。面积不大。',
   src:'https://jinrifangche.com/luyingdi.php?id=354 · OSM node 11875464437'},
  {id:'dtj',n:'大塘金山野营地',p:[31.855057,118.72138],
-  a:'南京市江宁区谷里街道 · 正方中路 / 双金路一带（大塘金薰衣草庄园西侧停车点对面）；导航「大塘金山野营地」或「正方中路520号」',
-  fee:'第三方平台参考：帐篷营位约 198–398 元/晚，房车营位含水电约 398–498 元/晚（周末/节假日更高）→ 以「房车生活家」小程序 / 现场为准；普通停车是否另收未核实',toilet:true,overnight:'支持过夜露营，需提前预约，不接受无预约现场入住（第三方介绍）',
+  a:'南京市江宁区谷里街道 · 正方中路 / 双金路一带（大塘金薰衣草庄园西侧）；导航「大塘金山野营地」或「正方中路520号」',
+  near:'近牛首山 / 大塘金香草谷观光',
+  fee:'第三方平台参考：帐篷约 198–398 元/晚，房车含水电约 398–498 元/晚（周末更高）→ 以「房车生活家」小程序 / 现场为准；普通停车是否另收未单独核实',toilet:true,overnight:'支持过夜露营，需提前预约（第三方介绍称不接受无预约入住）',
   space:'开阔：介绍称占地约 200 亩，60 余个房车营位；有 24 小时热水淋浴、卫生间、洗漱区、充电',
-  dist:'距新街口约 22 km（约 30–40 分钟自驾）；近地铁 S1 正方中路站（出站再打车约 3 km）',
+  dist:'距新街口约 22 km（约 30–40 分钟）；近地铁 S1 正方中路站（出站再打车约 3 km）',
   phone:'17512510326（介绍页）',
-  tip:'场地大、设施全，但营位费不算「便宜停车」；适合想正规过夜露营时。',
-  src:'http://www.hlfclx.com/life_detail/289.html · https://huodong.com/venue/detail/eyoTh · OSM way 1309611919'}
+  tip:'场地大、设施全；营位费不算「路边便宜停车」，适合想正规过夜露营时。',
+  src:'http://www.hlfclx.com/life_detail/289.html · https://huodong.com/venue/detail/eyoTh · OSM way 1309611919'},
+ {id:'tangshan',n:'南京汤山温泉房车营地',p:[32.06887,119.055833],
+  a:'南京市江宁区汤山街道环镇北路 58 号（部分地图标 52 号）；导航「南京汤山温泉房车营地」',
+  near:'汤山温泉旅游度假区观光；地铁 S6 猿人洞站步行约 8 分钟；距沪宁高速汤山出口约 1.2 km',
+  fee:'自驾停车场：携程等平台标注「停车场免费」（以现场为准）。过夜营位/房车/木屋另计：第三方参考约 200–480 元/晚或住宿起价更高 → 务必电话 / 平台确认当日价',toilet:true,overnight:'支持过夜（房车营位、木屋、帐篷区等）；入住约 14:00 后、退房约 12:00 前（住宿类介绍）',
+  space:'开阔：南京市体育局介绍称规划约 329 亩，已建约 150 亩；80 个房车营位、150 个自驾游停车位；有公共卫生间（含儿童/第三卫生间、恒温）、淋浴、洗衣、公共厨房、温泉配套',
+  dist:'距新街口约 26 km（约 40–50 分钟）；适合行程前后在城东/汤山过夜',
+  phone:'025-84112266',
+  tip:'官方（市体育局）条目最完整的一处：场地大、有厕所、可过夜。过夜营位费不算极便宜，但自驾停车位多；非行程必经点，按需选用。',
+  src:'https://sports.nanjing.gov.cn/ztzl/njtyxfxcj/hwyd/202307/t20230725_3970411.html · https://www.5iluying.com/yingdi/2338.html · 高德 POI B0FFH5D67C（32.06887,119.055833）· 携程酒店页停车场免费标注'}
 ];
 var POI={
  hz:{n:'杭州出发（武林广场·示意起点）',day:'drive',num:'起',t:'10/16 周五 傍晚，建议 19:00 前出发',
@@ -899,7 +896,7 @@ var TIPS=[
  ['🏨 住 + 充电','住「新街口（酒店待定）」3 晚（10/16–19）。订房确认有停车场和充电桩（或附近公共桩），并告知晚到。到店充电过夜，返程前充满。'],
  ['🔋 电车','单程约 271 km，额定约 500 km 续航：出发前充到 90% 以上，单程无需充电。高速实际续航低于额定值。'],
  ['🕛 返程','周一尽可能 <b>12:00 前离开南京</b>，避开午后回杭拥堵；上午鸡鸣寺→台城→玄武湖控制节奏。'],
- ['⛺ 露营停车','地图「露营停车」页列出核实过的宽敞/便宜/有厕所选项：G25 服务区（免费过路休息+公厕）和江宁两处房车营地。未核实价格或是否过夜的点未列入。'],
+ ['⛺ 露营停车','「露营停车」只列南京观光周边核实过的房车/营地（牛首山世凹桃源、大塘金、汤山温泉房车营地）：要宽敞、有厕所、可过夜。高速服务区不列入（仅作过路休息/充电）。价格与是否接小客车过夜请电话确认。'],
  ['👥 人多','10/17–18 周末：按预约时段入场；中山陵 8:30 开门早到；夫子庙 / 秦淮河晚上人最多。'],
  ['🪪 证件','所有预约要<b>身份证原件</b>，两人分别实名。总统府、纪念馆、中山陵、南博<b>周一闭馆</b>，所以周一安排鸡鸣寺 / 城墙 / 玄武湖。']];
 </script>
@@ -952,7 +949,7 @@ G.camp=L.layerGroup(); BND.camp=L.latLngBounds([]);
 var CM={};
 function campPopup(c){var h='<div class="pp"><h4>⛺ '+esc(c.n)+'</h4>';
  h+='<div class="t">'+(c.overnight.indexOf('允许')>=0||c.overnight.indexOf('支持')>=0?'可过夜相关':'停车休息')+' · '+(c.toilet?'有厕所':'厕所未核实')+'</div>';
- h+='<div class="r"><b class="l">地址</b>'+c.a+'</div>';
+ h+='<div class="r"><b class="l">地址</b>'+c.a+'</div>'+(c.near?'<div class="r"><b class="l">观光</b>'+c.near+'</div>':'');
  h+='<div class="r"><b class="l">停车费</b>'+c.fee+'</div>';
  h+='<div class="r"><b class="l">厕所</b>'+(c.toilet?'已核实有公共卫生间 / 淋浴相关描述':'未核实')+'</div>';
  h+='<div class="r"><b class="l">过夜</b>'+c.overnight+'</div>';
@@ -1003,19 +1000,19 @@ function driveHtml(){var g=D.go,b=D.back;function hm(m){return Math.floor(m/60)+
  h+='<div class="tli mv"><span class="mt">返程服务区（距南京）：</span>'+SA.slice().reverse().map(function(s){var i=SA.indexOf(s);return '<div class="sa" data-sa="'+i+'"><span>⛽ '+s.n+(s.ch?'<span class="badge">有充电桩</span>':'')+'</span><span>'+s.back+' km</span></div>';}).join('')+'</div></div>';
  h+='<div class="card"><h3>🔋 电车续航</h3>单程约 271 km，额定续航约 500 km：出发前充到 90% 以上，单程无需充电。高速实际续航低于额定值，到南京后在酒店充电，返程前充满。如酒店充不上，返程可在溧阳天目湖 / 宜兴太湖服务区补电。</div>';
  return h;}
-function campHtml(){var h='<div class="note">只列已核实「相对宽敞 + 停车便宜/免费 + 有厕所」的选项。正规房车营地会收营位费；<b>高速服务区</b>是最可靠的免费过夜车内休息点（有公厕），但不是挂帐篷营地。价格/是否接小客车过夜请出发前再确认。</div>';
+function campHtml(){var h='<div class="note">只列<b>南京观光周边</b>已核实的房车/营地（近牛首山、汤山等）：相对宽敞、有厕所、支持过夜。高速服务区已按你的要求去掉。正规营地过夜通常收营位费；自驾停车是否免费以现场为准。出发前请电话确认。</div>';
  CAMP.forEach(function(c,i){h+='<div class="card bk" style="--c:'+DAYC.camp+';cursor:pointer" data-camp="'+c.id+'"><h3>⛺ '+esc(c.n)+'</h3>';
   h+='<div class="mt">💰 '+c.fee+'</div><div class="mt">🚻 厕所：'+(c.toilet?'有（已核实）':'未核实')+'</div>';
   h+='<div class="mt">🌙 '+c.overnight+'</div><div class="mt">📍 '+c.dist+'</div>';
   if(c.phone)h+='<div class="mt">☎ '+esc(c.phone)+'</div>';
   h+='<div class="mt" style="color:#666;font-size:12px">来源：'+c.src+'</div></div>';});
- h+='<div class="card"><h3>未列入（原因）</h3>行者房车营地（玄武五棵松）：官网写明「已经转型，不再提供服务」。露盟·锐斯特、骆山花火等：公开信息里电话/精确坐标/过夜停车费不完整，故未标到地图，避免误导。</div>';
+ h+='<div class="card"><h3>未列入（原因）</h3>高速服务区（宜兴太湖、溧阳天目湖等）：按你的要求不作为观光露营停车推荐（过路休息/充电仍可在「自驾」页查看）。行者房车营地：官网写明已转型停业。朱门 / 露盟锐斯特 / 骆山花火等：精确坐标或过夜停车费未核全，未上图。</div>';
  return h+legendHtml();}
 function allHtml(){var h='<div class="card" style="background:#f7f9ff"><b>行程总览</b>（点日期查看当天路线和时间轴）<br>🚗 10/16 周五晚 杭州 → 南京新街口（约 271 km，3 小时）<br>';
  h+='<span style="color:'+DAYC[17]+'">● 10/17 周六</span> 纪念馆（上午场）→ 缓冲午饭 → 总统府（下午场）→ 夫子庙 / 秦淮河游船 → 老门东<br>';
  h+='<span style="color:'+DAYC[18]+'">● 10/18 周日</span> 中山陵（≤2.5h，明孝陵可选；地铁+接驳）→ 南京博物院（下午场）→ 新街口<br>';
  h+='<span style="color:'+DAYC[19]+'">● 10/19 周一</span> 鸡鸣寺 → 台城 → 玄武湖 → <b>争取 12:00 前</b>自驾回杭</div>';
- h+=['drive',17,18,19,'camp'].map(function(d){return '<div class="card bk" style="--c:'+DAYC[d]+';cursor:pointer" data-go="'+d+'"><b style="color:'+DAYC[d]+'">'+(d==='drive'?'🚗 自驾（去程 10/16 · 返程 10/19）':(d==='camp'?'⛺ 露营 / 过夜停车':'')||DAYN[d])+'</b><br><span class="mt" style="font-size:12.5px;color:#555">'+(d==='drive'?'G25 杭宁高速 · 服务区 · 充电':(d==='camp'?'服务区免费休息 + 江宁房车营地（核实过的）':TL[d].filter(function(x){return x.p;}).map(function(x){return POI[x.p].n;}).join(' → ')))+'</span></div>';}).join('');
+ h+=['drive',17,18,19,'camp'].map(function(d){return '<div class="card bk" style="--c:'+DAYC[d]+';cursor:pointer" data-go="'+d+'"><b style="color:'+DAYC[d]+'">'+(d==='drive'?'🚗 自驾（去程 10/16 · 返程 10/19）':(d==='camp'?'⛺ 露营 / 过夜停车':'')||DAYN[d])+'</b><br><span class="mt" style="font-size:12.5px;color:#555">'+(d==='drive'?'G25 杭宁高速 · 服务区 · 充电':(d==='camp'?'牛首山 / 汤山周边房车营地（核实过的）':TL[d].filter(function(x){return x.p;}).map(function(x){return POI[x.p].n;}).join(' → ')))+'</span></div>';}).join('');
  h+=legendHtml()+'<div class="note">路线：自驾 / 打车 / 接驳车来自 OSRM（OpenStreetMap 数据），步行来自 FOSSGIS 步行路由，地铁沿 OSM 地铁线路绘制；时间为估算，出行请以高德 / 百度实时导航为准。景点开放和预约信息核对自各景区官网 / 官方公告（2026 年），出发前请再确认。</div>';
  return h;}
 function legendHtml(){function sv(st){return '<svg width="44" height="10">'+st+'</svg>';}
