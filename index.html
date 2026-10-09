@@ -730,6 +730,13 @@ html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Pin
 .pp .r b.l{display:inline-block;min-width:34px;color:#666;font-weight:600}
 .pin{width:26px;height:26px;border-radius:13px;color:#fff;font-weight:700;font-size:13px;line-height:22px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.45)}
 .pin.big{width:30px;height:30px;border-radius:15px;line-height:26px;font-size:14px}
+.cheshu{width:28px;height:28px;border-radius:50%;background:#FB8C00;color:#fff;font-size:13px;font-weight:700;line-height:24px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
+.camthin{width:22px;height:22px;border-radius:11px;background:#fff;color:#EF6C00;font-size:14px;font-weight:700;line-height:18px;text-align:center;border:2px dashed #EF6C00;box-shadow:0 1px 3px rgba(0,0,0,.25);opacity:.9}
+.camday{width:24px;height:24px;border-radius:50%;background:#FFE082;color:#6D4C00;font-size:12px;font-weight:700;line-height:20px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.camunk{width:24px;height:24px;border-radius:50%;background:#9575CD;color:#fff;font-size:13px;font-weight:700;line-height:20px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.35)}
+.thin{border:2px dashed #EF6C00!important;opacity:.9}
+.ctab{border-collapse:collapse;width:100%;font-size:12.5px}.ctab th,.ctab td{border-bottom:1px solid #eee;padding:4px 3px;text-align:left;white-space:nowrap}.ctab td:first-child{white-space:normal}.ctab tr:hover{background:#fff3e0}
+.csort{border:1px solid #EF6C00;background:#fff;color:#EF6C00;border-radius:12px;padding:2px 8px;margin:2px;font-size:12px;cursor:pointer}.csort.on{background:#EF6C00;color:#fff}
 .campin{width:28px;height:28px;border-radius:6px;background:#EF6C00;color:#fff;font-size:13px;font-weight:700;line-height:24px;text-align:center;border:2px solid #fff;box-shadow:0 1px 4px rgba(0,0,0,.4)}
 .sapin{width:22px;height:22px;border-radius:5px;background:#fff;border:2px solid #1565C0;color:#1565C0;font-size:12px;font-weight:700;line-height:18px;text-align:center;box-shadow:0 1px 3px rgba(0,0,0,.35)}
 .stpin{width:14px;height:14px;border-radius:7px;background:#fff;border:3px solid #444;box-shadow:0 0 2px rgba(0,0,0,.4)}
@@ -784,7 +791,7 @@ var SA=[
  {n:'宜兴太湖服务区',p:[31.1947,119.9055],go:116,back:155,ch:true,prov:'江苏宜兴'},
  {n:'溧阳天目湖服务区',p:[31.3847,119.5083],go:163,back:108,ch:true,prov:'江苏溧阳，约在全程中点，推荐休息'},
  {n:'溧水东庐山服务区',p:[31.6140,119.1442],go:208,back:64,ch:null,prov:'江苏南京溧水'}];
-/* 露营/过夜停车：行程观光周边（牛首山/汤山等）。不含高速服务区。只列核实过的。 */
+/* 露营停车：kind camp=房车营地，park=停车场露营；ov night=经验可过夜/day=仅白天/unk=未知；不含高速服务区 */
 var CAMP=[
  {id:'saoy',n:'世凹桃源房车营地（牛首山）',p:[31.914281,118.721917],
   a:'南京市江宁区谷里街道周村社区世凹村（牛首山西南麓）；导航「世凹桃源」，游客接待中心后侧为营地入口',
@@ -794,7 +801,7 @@ var CAMP=[
   dist:'距新街口约 15 km（约 30–40 分钟）；距市区约 8 km（介绍）',
   phone:'相关介绍页曾列 17512510326 / 15863215789（请再核实）',
   tip:'离市区近、性价比取向，适合逛牛首山后过夜。面积不大。',
-  src:'https://jinrifangche.com/luyingdi.php?id=354 · OSM node 11875464437'},
+  src:'https://jinrifangche.com/luyingdi.php?id=354 · OSM node 11875464437',kind:"camp",ov:"night",feeN:150,pros:"离牛首山近、正规房车营、水电淋浴",cons:"面积小（约20位）、价格需电话确认",km:15.4},
  {id:'dtj',n:'大塘金山野营地',p:[31.855057,118.72138],
   a:'南京市江宁区谷里街道 · 正方中路 / 双金路一带（大塘金薰衣草庄园西侧）；导航「大塘金山野营地」或「正方中路520号」',
   near:'近牛首山 / 大塘金香草谷观光',
@@ -803,7 +810,7 @@ var CAMP=[
   dist:'距新街口约 22 km（约 30–40 分钟）；近地铁 S1 正方中路站（出站再打车约 3 km）',
   phone:'17512510326（介绍页）',
   tip:'场地大、设施全；营位费不算「路边便宜停车」，适合想正规过夜露营时。',
-  src:'http://www.hlfclx.com/life_detail/289.html · https://huodong.com/venue/detail/eyoTh · OSM way 1309611919'},
+  src:'http://www.hlfclx.com/life_detail/289.html · https://huodong.com/venue/detail/eyoTh · OSM way 1309611919',kind:"camp",ov:"night",feeN:300,pros:"场地大（60+营位）、24h热水淋浴、充电",cons:"营位费198–498元/晚、需预约",km:21.7},
  {id:'tangshan',n:'南京汤山温泉房车营地',p:[32.06887,119.055833],
   a:'南京市江宁区汤山街道环镇北路 58 号（部分地图标 52 号）；导航「南京汤山温泉房车营地」',
   near:'汤山温泉旅游度假区观光；地铁 S6 猿人洞站步行约 8 分钟；距沪宁高速汤山出口约 1.2 km',
@@ -812,7 +819,18 @@ var CAMP=[
   dist:'距新街口约 26 km（约 40–50 分钟）；适合行程前后在城东/汤山过夜',
   phone:'025-84112266',
   tip:'官方（市体育局）条目最完整的一处：场地大、有厕所、可过夜。过夜营位费不算极便宜，但自驾停车位多；非行程必经点，按需选用。',
-  src:'https://sports.nanjing.gov.cn/ztzl/njtyxfxcj/hwyd/202307/t20230725_3970411.html · https://www.5iluying.com/yingdi/2338.html · 高德 POI B0FFH5D67C（32.06887,119.055833）· 携程酒店页停车场免费标注'}
+  src:'https://sports.nanjing.gov.cn/ztzl/njtyxfxcj/hwyd/202307/t20230725_3970411.html · https://www.5iluying.com/yingdi/2338.html · 高德 POI B0FFH5D67C（32.06887,119.055833）· 携程酒店页停车场免费标注',kind:"camp",ov:"night",feeN:250,pros:"官方条目、150个自驾车位、恒温卫生间、温泉",cons:"离市区最远（26km）、过夜营位另计费",km:26.3},
+ {id:"ql_park",n:"玄武湖公园·情侣园停车场",p:[32.073082, 118.805707],ov:"night",thin:false,feeN:6,toilet:true,a:"玄武湖公园 情侣园门（龙蟠路 / 花卉大道一侧）；导航「玄武湖公园情侣园停车场」；近地铁 1 号线岗子村站",near:"玄武湖、鸡鸣寺（约 2 km）、台城/明城墙",fee:"夜间约 1 元/时，网传封顶 6 元、实测可能更高；白天封顶约 24–27 元（以现场公示为准）",overnight:"🌙 经验可过夜：床车过夜经验点（非官方营地）；⚠️ 景区规定帐篷禁止过夜（仅白天 9:00–17:00）",space:"露天地面停车场（OSM 收费停车场）；有厕所，热水 / 母婴室不稳定；充电桩信息说法冲突，以现场为准",pros:"离新街口最近、夜里便宜、地铁 2 站到市中心",cons:"只能车内睡，不能搭帐篷过夜；周末白天车多",src:"小红书床车笔记（游客经验）· 玄武湖公园帐篷管理规定 · OSM way 1481273722",kind:"park",km:4.1,dist:"距新街口直线约 4.1 km"},
+ {id:"zs_sport",n:"钟山体育运动公园地面停车场",p:[32.048862, 118.865391],ov:"night",thin:false,feeN:10,toilet:true,a:"玄武区 钟山体育运动公园（中山门外 / 环陵路一带）地面停车场；导航「钟山体育运动公园停车场」",near:"明孝陵、中山陵、南京博物院（约 5 km）",fee:"夜间约 6–15 元（口径不一，以现场公示为准）",overnight:"🌙 经验可过夜：床车 + 帐篷都有人过夜（游客经验，非官方营地）",space:"地面停车场，厕所在对面；热水不稳定；周末易满",pros:"紧邻 18 日中山陵/明孝陵行程、能搭帐篷、草地运动场",cons:"周末易满、收费口径不一、热水不稳",src:"小红书车宿笔记（游客经验）· OSM way 1088963676",kind:"park",km:8.2,dist:"距新街口直线约 8.2 km"},
+ {id:"sanqiao",n:"三桥湿地公园停车场（雨花台·江豚湾）",p:[31.95538, 118.646168],ov:"night",thin:false,feeN:0,toilet:true,a:"雨花台区扬子江大道 460 号 三桥湿地公园；导航「三桥湿地公园」",near:"长江三桥 / 大胜关大桥江景、江豚观赏；对岸是鱼嘴湿地",fee:"园区停车免费（周末紧张，路边有志愿者引导）",overnight:"🌙 可过夜但需提前线上预约营地；自由草坪露营区开放 9:00–21:00",space:"公园大、大片江边草坪；厕所多；可卡式炉 / 烧烤（以现场为准）",pros:"免费停车、厕所多、空间大、可预约过夜",cons:"离市区约 16 km；周末停车紧张；过夜必须预约",src:"携程 Trip Moments 三桥湿地公园 · parking.decken.me 小红书转载 · 460.net 2026 露营地图 · OSM way 1026066774",kind:"park",km:15.9,dist:"距新街口直线约 15.9 km"},
+ {id:"xiangshan",n:"象山湖公园停车场（浦口·老山脚下）",p:[32.085468, 118.616546],ov:"day",thin:false,feeN:0,toilet:true,a:"浦口区 沿山大道与象山路交叉口 象山湖公园；P1 最近但易满，可停 P2",near:"老山、象山湖草坪",fee:"公园免费；停车费未见统一口径（P1/P2）；园内「隐野CAMP」付费营地约 298–498 元/营位",overnight:"☀️ 公共草坪以白天露营为主（未见过夜许可）；过夜请订园内付费营地",space:"超大草坪；有卫生间、热水；可炭火 / 卡式炉（攻略口径）",pros:"厕所+热水、草坪大、免费",cons:"约 16 km 且在江北；P1 易满；公共区过夜未确认",src:"460.net 2026 南京露营地图 · 去哪儿 · OSM way 1230875244 / 1230875245",kind:"park",km:16.0,dist:"距新街口直线约 16.0 km"},
+ {id:"qilin",n:"麒麟生态公园停车场（麒麟中央公园）",p:[32.029951, 118.883962],ov:"day",thin:false,feeN:0,toilet:true,a:"江宁/栖霞交界 麒麟科创园，东麒路—马高路之间；导航「麒麟生态公园停车场」或「麒麟生态公园三期停车场」",near:"紫金山东南侧，离中山陵/钟山约 6–8 km",fee:"公园免费；二期约 100 个车位（停车费未见公布）",overnight:"☀️ 白天草坪露营（未见过夜许可）",space:"120 万㎡城市公园，大草坪、宠物友好；OSM 标有公共厕所",pros:"空间大、人相对少、宠物友好",cons:"过夜规则未知；停车费未公布",src:"扬子晚报 2025-12-16《免费！南京“巨无霸”公园火了》· OSM way 1425203308 / 厕所 node 13099734621",kind:"park",km:10.0,dist:"距新街口直线约 10.0 km"},
+ {id:"yangshan",n:"羊山公园（仙林）停车点",p:[32.111927, 118.927831],ov:"day",thin:false,feeN:null,toilet:true,a:"栖霞区 环园路与九乡河西路交汇处；地铁 2 号线羊山公园站；自驾建议停东门路边",near:"仙林大学城；距汤山约 13 km",fee:"园区限车进入，附近路边收费停车（价格未公布）",overnight:"☀️ 白天露营区（东门 / 西门两处），未见过夜许可",space:"湖边大草坪；OSM 标有卫生间",pros:"安静、草坪大、地铁直达",cons:"车不能进园、停车离草坪较远；过夜未确认",src:"腾讯新闻 2025-12-09 羊山公园攻略 · 460.net 露营地图 · OSM way 225001183 / 225007361",kind:"park",km:16.0,dist:"距新街口直线约 16.0 km"},
+ {id:"yuzui",n:"鱼嘴湿地公园 1 号停车场",p:[31.969288, 118.66027],ov:"unk",thin:false,feeN:null,toilet:null,a:"建邺区扬子江大道 888 号；导航「鱼嘴湿地公园1号停车场」；地铁 2 号线鱼嘴站",near:"「南京小垦丁」红白灯塔、长江落日",fee:"约 2 元/时（夜间封顶未知）",overnight:"❓ 公园 24 小时开放、可搭帐篷野餐，但未见明确过夜许可",space:"停车场 + 江边草坪；周末傍晚车位紧张（16 点前到）；不可明火",pros:"日落最好看、地铁可达",cons:"周末很挤、过夜规则不明、厕所未核实",src:"美篇《南京行之四：鱼嘴湿地公园》· bang.cn 南京露营榜 · OSM way 982381699",kind:"park",km:13.9,dist:"距新街口直线约 13.9 km"},
+ {id:"jiulong",n:"九龙湖公园（江宁）停车点",p:[31.903253, 118.814432],ov:"day",thin:false,feeN:0,toilet:null,a:"江宁区 苏源大道与清水亭西路交叉口东北角；导航「九龙湖公园」或「九龙湖广场停车场」（坐标为公园位置，约略）",near:"东南大学九龙湖校区；距牛首山约 12 km",fee:"停车免费（攻略口径）但车位紧张",overnight:"☀️ 大草坪白天露营 / 可明火烧烤（攻略口径），未见过夜许可",space:"大草坪 + 湖景；人多帐篷密集",pros:"免费、可烧烤、餐饮方便",cons:"人多、车位紧；厕所未单独核实；过夜未确认",src:"腾讯新闻 2025-12-02 九龙湖公园指南 · bang.cn 南京露营榜 · OSM way 884668161（坐标约略）",kind:"park",km:16.0,dist:"距新街口直线约 16.0 km"},
+ {id:"jxz",n:"江心洲临时露营区（桃园街一带）",p:[32.058462, 118.71529],ov:"unk",thin:true,feeN:0,toilet:true,a:"建邺区 江心洲（生态科技岛）桃园街 / 环岛路一带；官方划定 5 处临时露营区（坐标为桃园街，约略）",near:"南京眼步行桥、E³PARK 体育公园、环岛骑行",fee:"临时露营区免费（未见收费）；第三方称「5 号露营地」付费 200–450 元/营位（未经官方确认）",overnight:"❓ 官方临时露营区未说明可否过夜；大型活动期间明确禁帐篷 / 禁过夜",space:"配移动公厕（2022 管委会答复），保安巡逻；商业配套少",pros:"官方划定、离市区约 6 km、免费",cons:"过夜规则不明、移动厕所简陋、位置需现场找",src:"人民网领导留言板 2022-11 生态科技岛经开区答复 · 南京体育集团 2025 露营大会公告 · 活动网（第三方）",kind:"park",km:6.2,dist:"距新街口直线约 6.2 km"},
+ {id:"wentao",n:"浦口滨江·闻涛广场（滨江湿地公园）",p:[32.06773, 118.682869],ov:"night",thin:true,feeN:null,toilet:null,a:"浦口区 滨江大道 闻涛广场 / 浦口滨江湿地公园；附近有地面停车场",near:"长江江景、浦口火车站老站（约 3 km）",fee:"未核实",overnight:"🌙 小红书有车宿经验（信息较薄）",space:"江边广场，附近有停车场；厕所未核实",pros:"江景、离市区约 10 km",cons:"信息较薄：收费 / 厕所 / 过夜都需现场确认",src:"小红书车宿笔记（信息较薄）· OSM 滨江湿地公园 way 361679302",kind:"park",km:9.4,dist:"距新街口直线约 9.4 km"},
+ {id:"jtl",n:"经天路地铁站停车场",p:[32.117594, 118.972232],ov:"night",thin:true,feeN:null,toilet:null,a:"栖霞区 地铁 2 号线经天路站（终点站）旁停车场；导航「经天路地铁站停车场」",near:"地铁 2 号线直达新街口 / 鸡鸣寺 / 苜蓿园（中山陵）",fee:"未核实（地铁换乘停车场一般按时计费）",overnight:"🌙 小红书有车宿经验（信息较薄）",space:"地铁 P+R 停车场；厕所未核实（站内厕所随运营时间）",pros:"地铁一线进城、相对安静",cons:"离市区约 20 km；信息较薄",src:"小红书车宿笔记（信息较薄）· OSM way 852008676",kind:"park",km:20.0,dist:"距新街口直线约 20.0 km"}
 ];
 var POI={
  hz:{n:'杭州出发（武林广场·示意起点）',day:'drive',num:'起',t:'10/16 周五 傍晚，建议 19:00 前出发',
@@ -896,7 +914,7 @@ var TIPS=[
  ['🏨 住 + 充电','住「新街口（酒店待定）」3 晚（10/16–19）。订房确认有停车场和充电桩（或附近公共桩），并告知晚到。到店充电过夜，返程前充满。'],
  ['🔋 电车','单程约 271 km，额定约 500 km 续航：出发前充到 90% 以上，单程无需充电。高速实际续航低于额定值。'],
  ['🕛 返程','周一尽可能 <b>12:00 前离开南京</b>，避开午后回杭拥堵；上午鸡鸣寺→台城→玄武湖控制节奏。'],
- ['⛺ 露营停车','「露营停车」只列南京观光周边核实过的房车/营地（牛首山世凹桃源、大塘金、汤山温泉房车营地）：要宽敞、有厕所、可过夜。高速服务区不列入（仅作过路休息/充电）。价格与是否接小客车过夜请电话确认。'],
+ ['⛺ 露营停车','市中心没有正规房车营，新街口建议住酒店。「露营停车」分两类：⛺ 房车营地（正规、收费）与 🅿️ 停车场露营（小红书游客经验，非官方营地）；面板里有对比表可按距离 / 费用 / 过夜排序。玄武湖官方规定帐篷禁止过夜（车内睡另说）；☀️ 标记的公园只适合白天露营。车宿收费与规定以出发前现场公示为准。高速服务区不列入。来源：小红书笔记 + 网页核对。'],
  ['👥 人多','10/17–18 周末：按预约时段入场；中山陵 8:30 开门早到；夫子庙 / 秦淮河晚上人最多。'],
  ['🪪 证件','所有预约要<b>身份证原件</b>，两人分别实名。总统府、纪念馆、中山陵、南博<b>周一闭馆</b>，所以周一安排鸡鸣寺 / 城墙 / 玄武湖。']];
 </script>
@@ -947,20 +965,25 @@ var SAM=[];SA.forEach(function(s,i){var m=L.marker(s.p,{icon:L.divIcon({classNam
 // camping / overnight parking layer
 G.camp=L.layerGroup(); BND.camp=L.latLngBounds([]);
 var CM={};
-function campPopup(c){var h='<div class="pp"><h4>⛺ '+esc(c.n)+'</h4>';
- h+='<div class="t">'+(c.overnight.indexOf('允许')>=0||c.overnight.indexOf('支持')>=0?'可过夜相关':'停车休息')+' · '+(c.toilet?'有厕所':'厕所未核实')+'</div>';
+var OVL={night:'🌙 经验可过夜',day:'☀️ 仅白天',unk:'❓ 过夜未知'};
+function campTag(c){return c.kind==='camp'?'⛺ 房车营地':('🅿️ 停车场露营'+(c.thin?'·信息较薄':''));}
+function campPopup(c){
+ var h='<div class="pp"><h4>'+esc(c.n)+'</h4><div class="t">'+campTag(c)+' · '+OVL[c.ov]+' · '+(c.toilet===true?'有厕所':(c.toilet===false?'无厕所':'厕所未核实'))+'</div>';
  h+='<div class="r"><b class="l">地址</b>'+c.a+'</div>'+(c.near?'<div class="r"><b class="l">观光</b>'+c.near+'</div>':'');
  h+='<div class="r"><b class="l">停车费</b>'+c.fee+'</div>';
- h+='<div class="r"><b class="l">厕所</b>'+(c.toilet?'已核实有公共卫生间 / 淋浴相关描述':'未核实')+'</div>';
  h+='<div class="r"><b class="l">过夜</b>'+c.overnight+'</div>';
  h+='<div class="r"><b class="l">场地</b>'+c.space+'</div>';
  h+='<div class="r"><b class="l">距离</b>'+c.dist+'</div>';
+ if(c.pros)h+='<div class="r"><b class="l">优点</b>'+c.pros+'</div>';
+ if(c.cons)h+='<div class="r"><b class="l">缺点</b>'+c.cons+'</div>';
  if(c.phone)h+='<div class="r"><b class="l">电话</b>'+esc(c.phone)+'</div>';
  if(c.tip)h+='<div class="r">💡 '+c.tip+'</div>';
  h+='<div class="r note">来源：'+c.src+'</div>';
  return h+nav(c.p,c.n)+'</div>';}
-CAMP.forEach(function(c){var m=L.marker(c.p,{icon:L.divIcon({className:'',html:'<div class="campin">营</div>',iconSize:[28,28],iconAnchor:[14,14],popupAnchor:[0,-12]}),zIndexOffset:800});
- m.bindPopup(campPopup(c),{maxWidth:320});m.bindTooltip(c.n,{direction:'top',offset:[0,-12]});m.addTo(G.camp);CM[c.id]=m;BND.camp.extend(c.p);});
+function campCls(c){return c.kind==='camp'?['campin','营']:(c.ov==='night'?['cheshu','宿']:(c.ov==='day'?['camday','日']:['camunk','?']));}
+CAMP.forEach(function(c){var cl=campCls(c);
+ var m=L.marker(c.p,{icon:L.divIcon({className:'',html:'<div class="'+cl[0]+(c.thin?' thin':'')+'">'+cl[1]+'</div>',iconSize:[28,28],iconAnchor:[14,14],popupAnchor:[0,-12]}),zIndexOffset:c.kind==='camp'?850:(c.ov==='night'?800:600)});
+ m.bindPopup(campPopup(c),{maxWidth:330});m.bindTooltip(c.n,{direction:'top',offset:[0,-12]});m.addTo(G.camp);CM[c.id]=m;BND.camp.extend(c.p);});
 
 // POI markers
 var PM={};
@@ -1000,25 +1023,55 @@ function driveHtml(){var g=D.go,b=D.back;function hm(m){return Math.floor(m/60)+
  h+='<div class="tli mv"><span class="mt">返程服务区（距南京）：</span>'+SA.slice().reverse().map(function(s){var i=SA.indexOf(s);return '<div class="sa" data-sa="'+i+'"><span>⛽ '+s.n+(s.ch?'<span class="badge">有充电桩</span>':'')+'</span><span>'+s.back+' km</span></div>';}).join('')+'</div></div>';
  h+='<div class="card"><h3>🔋 电车续航</h3>单程约 271 km，额定续航约 500 km：出发前充到 90% 以上，单程无需充电。高速实际续航低于额定值，到南京后在酒店充电，返程前充满。如酒店充不上，返程可在溧阳天目湖 / 宜兴太湖服务区补电。</div>';
  return h;}
-function campHtml(){var h='<div class="note">只列<b>南京观光周边</b>已核实的房车/营地（近牛首山、汤山等）：相对宽敞、有厕所、支持过夜。高速服务区已按你的要求去掉。正规营地过夜通常收营位费；自驾停车是否免费以现场为准。出发前请电话确认。</div>';
- CAMP.forEach(function(c,i){h+='<div class="card bk" style="--c:'+DAYC.camp+';cursor:pointer" data-camp="'+c.id+'"><h3>⛺ '+esc(c.n)+'</h3>';
-  h+='<div class="mt">💰 '+c.fee+'</div><div class="mt">🚻 厕所：'+(c.toilet?'有（已核实）':'未核实')+'</div>';
-  h+='<div class="mt">🌙 '+c.overnight+'</div><div class="mt">📍 '+c.dist+'</div>';
-  if(c.phone)h+='<div class="mt">☎ '+esc(c.phone)+'</div>';
-  h+='<div class="mt" style="color:#666;font-size:12px">来源：'+c.src+'</div></div>';});
- h+='<div class="card"><h3>未列入（原因）</h3>高速服务区（宜兴太湖、溧阳天目湖等）：按你的要求不作为观光露营停车推荐（过路休息/充电仍可在「自驾」页查看）。行者房车营地：官网写明已转型停业。朱门 / 露盟锐斯特 / 骆山花火等：精确坐标或过夜停车费未核全，未上图。</div>';
+var campSort='km';
+function campRows(){var ovr={night:0,day:1,unk:2};
+ var arr=CAMP.slice().sort(function(x,y){
+  if(campSort==='fee'){var fx=x.feeN==null?999:x.feeN,fy=y.feeN==null?999:y.feeN;return fx-fy||x.km-y.km;}
+  if(campSort==='ov')return ovr[x.ov]-ovr[y.ov]||x.km-y.km;
+  if(campSort==='toilet'){var tx=x.toilet===true?0:1,ty=y.toilet===true?0:1;return tx-ty||x.km-y.km;}
+  return x.km-y.km;});
+ return arr.map(function(c){var fe=c.feeN==null?'未知':(c.feeN===0?'免费':(c.kind==='camp'?'≈'+c.feeN+'/晚':'≈'+c.feeN+'/夜'));
+  return '<tr data-camp="'+c.id+'" style="cursor:pointer'+(c.ov==='day'?';background:#fffbe6':'')+'"><td>'+(c.kind==='camp'?'⛺':'🅿️')+' '+esc(c.n.replace(/（.*?）/g,''))+(c.thin?' <span style="color:#999">(薄)</span>':'')+'</td><td>'+c.km+'</td><td>'+fe+'</td><td>'+(c.toilet===true?'✅':'?')+'</td><td>'+OVL[c.ov]+'</td></tr>';}).join('');}
+function campTable(){var b=function(k,t){return '<button class="csort'+(campSort===k?' on':'')+'" data-csort="'+k+'">'+t+'</button>';};
+ return '<div class="card" id="campcmp"><b>📊 对比表（点表头按钮排序，点行看位置）</b><div style="margin:6px 0">排序：'+b('km','距新街口')+b('fee','费用')+b('ov','可过夜优先')+b('toilet','有厕所优先')+'</div>'+
+  '<div style="overflow-x:auto"><table class="ctab"><thead><tr><th>地点</th><th>km</th><th>费用</th><th>厕所</th><th>过夜</th></tr></thead><tbody>'+campRows()+'</tbody></table></div>'+
+  '<div class="mt" style="font-size:12px;color:#666">km = 距新街口直线；费用为粗略口径（停车场按夜/日封顶，房车营地按营位/晚）；☀️ 黄底 = 仅白天，不建议过夜。</div></div>';}
+function campHtml(){function card(c){var cl=campCls(c);
+  return '<div class="card bk" style="--c:'+DAYC.camp+';cursor:pointer;opacity:'+(c.thin?'.88':'1')+'" data-camp="'+c.id+'"><h3>'+(c.kind==='camp'?'⛺':'🅿️')+' '+esc(c.n)+' <span style="font-size:12px;color:#888">'+OVL[c.ov]+(c.thin?' · 信息较薄':'')+'</span></h3>'+
+   (c.near?'<div class="mt">🗺️ '+c.near+'</div>':'')+
+   '<div class="mt">💰 '+c.fee+'</div><div class="mt">🚻 厕所：'+(c.toilet===true?'有':(c.toilet===false?'无':'未核实'))+'</div>'+
+   '<div class="mt">🌙 '+c.overnight+'</div><div class="mt">📍 '+c.dist+'</div>'+
+   (c.pros?'<div class="mt">👍 '+c.pros+'</div>':'')+(c.cons?'<div class="mt">👎 '+c.cons+'</div>':'')+
+   (c.phone?'<div class="mt">☎ '+esc(c.phone)+'</div>':'')+
+   (c.tip?'<div class="mt">💡 '+c.tip+'</div>':'')+
+   '<div class="mt" style="color:#666;font-size:12px">来源：'+c.src+'</div></div>';}
+ var h='<div class="note"><b>市中心没有正规房车营</b>——新街口建议住酒店。两类点：<b>🅿️ 停车场露营</b>（小红书等游客经验，非官方营地；便宜、宽敞、看厕所）与<b>⛺ 房车营地</b>（正规、收费）。玄武湖官方规定帐篷禁止过夜（只能车内睡）。☀️ = 仅白天露营。车宿收费口径不一，出发前看现场公示。高速服务区不列入。</div>';
+ h+=campTable();
+ var ord={night:0,unk:1,day:2};
+ var pk=CAMP.filter(function(c){return c.kind==='park';});
+ h+='<div class="sep" style="color:#FB8C00">🅿️ 停车场露营 · 🌙 经验可过夜</div>';
+ pk.filter(function(c){return c.ov==='night'&&!c.thin;}).forEach(function(c){h+=card(c);});
+ h+='<div class="sep" style="color:#FB8C00">🅿️ 停车场露营 · 🌙 经验可过夜（信息较薄）</div>';
+ pk.filter(function(c){return c.ov==='night'&&c.thin;}).forEach(function(c){h+=card(c);});
+ h+='<div class="sep" style="color:#7E57C2">🅿️ 停车场露营 · ❓ 过夜未知</div>';
+ pk.filter(function(c){return c.ov==='unk';}).forEach(function(c){h+=card(c);});
+ h+='<div class="sep" style="color:#C9A400">🅿️ 停车场 + 公园草坪 · ☀️ 仅白天露营</div>';
+ pk.filter(function(c){return c.ov==='day';}).forEach(function(c){h+=card(c);});
+ h+='<div class="sep" style="color:'+DAYC.camp+'">⛺ 房车营地（正规，可过夜）</div>';
+ CAMP.filter(function(c){return c.kind==='camp';}).forEach(function(c){h+=card(c);});
+ h+='<div class="card"><h3>未列入</h3>高速服务区不作观光露营推荐。皮库水库（江宁）：地图上找不到可靠的停车场 / 入口坐标，也无厕所与过夜信息。秦淮河房车露营公园（长虹路）：近年营业未核实。行者营地已停业。</div>';
  return h+legendHtml();}
 function allHtml(){var h='<div class="card" style="background:#f7f9ff"><b>行程总览</b>（点日期查看当天路线和时间轴）<br>🚗 10/16 周五晚 杭州 → 南京新街口（约 271 km，3 小时）<br>';
  h+='<span style="color:'+DAYC[17]+'">● 10/17 周六</span> 纪念馆（上午场）→ 缓冲午饭 → 总统府（下午场）→ 夫子庙 / 秦淮河游船 → 老门东<br>';
  h+='<span style="color:'+DAYC[18]+'">● 10/18 周日</span> 中山陵（≤2.5h，明孝陵可选；地铁+接驳）→ 南京博物院（下午场）→ 新街口<br>';
  h+='<span style="color:'+DAYC[19]+'">● 10/19 周一</span> 鸡鸣寺 → 台城 → 玄武湖 → <b>争取 12:00 前</b>自驾回杭</div>';
- h+=['drive',17,18,19,'camp'].map(function(d){return '<div class="card bk" style="--c:'+DAYC[d]+';cursor:pointer" data-go="'+d+'"><b style="color:'+DAYC[d]+'">'+(d==='drive'?'🚗 自驾（去程 10/16 · 返程 10/19）':(d==='camp'?'⛺ 露营 / 过夜停车':'')||DAYN[d])+'</b><br><span class="mt" style="font-size:12.5px;color:#555">'+(d==='drive'?'G25 杭宁高速 · 服务区 · 充电':(d==='camp'?'牛首山 / 汤山周边房车营地（核实过的）':TL[d].filter(function(x){return x.p;}).map(function(x){return POI[x.p].n;}).join(' → ')))+'</span></div>';}).join('');
+ h+=['drive',17,18,19,'camp'].map(function(d){return '<div class="card bk" style="--c:'+DAYC[d]+';cursor:pointer" data-go="'+d+'"><b style="color:'+DAYC[d]+'">'+(d==='drive'?'🚗 自驾（去程 10/16 · 返程 10/19）':(d==='camp'?'⛺ 露营 / 过夜停车':'')||DAYN[d])+'</b><br><span class="mt" style="font-size:12.5px;color:#555">'+(d==='drive'?'G25 杭宁高速 · 服务区 · 充电':(d==='camp'?'停车场露营 11 处 + 房车营地 3 处（含对比表）':TL[d].filter(function(x){return x.p;}).map(function(x){return POI[x.p].n;}).join(' → ')))+'</span></div>';}).join('');
  h+=legendHtml()+'<div class="note">路线：自驾 / 打车 / 接驳车来自 OSRM（OpenStreetMap 数据），步行来自 FOSSGIS 步行路由，地铁沿 OSM 地铁线路绘制；时间为估算，出行请以高德 / 百度实时导航为准。景点开放和预约信息核对自各景区官网 / 官方公告（2026 年），出发前请再确认。</div>';
  return h;}
 function legendHtml(){function sv(st){return '<svg width="44" height="10">'+st+'</svg>';}
  return '<div class="legend"><b>图例</b><br>'+sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#1565C0" stroke-width="6"/>')+'自驾去程　'+sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#00838F" stroke-width="3.5" stroke-dasharray="10,9"/>')+'自驾返程<br>'+
  sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#E53935" stroke-width="7"/><line x1="2" y1="5" x2="42" y2="5" stroke="#fff" stroke-width="2.5" stroke-dasharray="6,8"/>')+'地铁　'+sv('<line x1="3" y1="5" x2="42" y2="5" stroke="#E53935" stroke-width="4.5" stroke-dasharray="1,8" stroke-linecap="round"/>')+'步行　'+sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#E53935" stroke-width="4" stroke-dasharray="10,7"/>')+'打车<br>'+
- sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#2E7D32" stroke-width="4" stroke-dasharray="5,6"/>')+'景区接驳车　'+sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#757575" stroke-width="4" stroke-dasharray="10,7"/>')+'自驾备选<br>颜色：<span style="color:#E53935">■ 17日</span> <span style="color:#2E7D32">■ 18日</span> <span style="color:#8E24AA">■ 19日</span> · 数字 = 当天顺序 · <span class="sapin" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px">服</span> 服务区 · <span class="campin" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px;border-radius:4px">营</span> 露营停车</div>';}
+ sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#2E7D32" stroke-width="4" stroke-dasharray="5,6"/>')+'景区接驳车　'+sv('<line x1="2" y1="5" x2="42" y2="5" stroke="#757575" stroke-width="4" stroke-dasharray="10,7"/>')+'自驾备选<br>颜色：<span style="color:#E53935">■ 17日</span> <span style="color:#2E7D32">■ 18日</span> <span style="color:#8E24AA">■ 19日</span> · 数字 = 当天顺序 · <span class="sapin" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px">服</span> 服务区 · <span class="campin" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px;border-radius:4px">营</span> 房车营地 · <span class="cheshu" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px">宿</span> 停车场露营·可过夜 · <span class="camunk" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px">?</span> 过夜未知 · <span class="camday" style="display:inline-block;width:18px;height:18px;line-height:14px;font-size:10px">日</span> 仅白天 · 虚线框 = 信息较薄</div>';}
 // ---------- booking ----------
 function bookHtml(){var now=new Date(),nx=-1,h='<div class="note">所有预约都需<b>身份证原件</b>，2 人分别实名。总统府、纪念馆、中山陵、南博<b>周一闭馆</b>。时间为北京时间，建议提前 5 分钟进入页面准点刷新。</div>';
  BOOK.forEach(function(b,i){if(nx<0&&new Date(b.d+':00+08:00')>now)nx=i;});
@@ -1039,7 +1092,7 @@ function show(d,fit){curD=d;Object.keys(G).forEach(function(k){map.removeLayer(G
  if(fit!==false)fitTo(d);}
 function padOpt(){if(isMob()){var sh=document.getElementById('side').offsetHeight;return {paddingTopLeft:[20,20],paddingBottomRight:[20,sh+36]};}return {padding:[30,30]};}
 function fitTo(d){var b;if(d==='all'){b=L.latLngBounds([]);b.extend(BND.drive);b.extend(BND[17]);b.extend(BND[18]);b.extend(BND[19]);}
- else if(d==='camp'){b=L.latLngBounds([]);b.extend(BND.camp);b.extend(BND.drive);}
+ else if(d==='camp'){b=L.latLngBounds([]);b.extend(BND.camp);}
  else b=BND[d];map.fitBounds(b,Object.assign(padOpt(),{maxZoom:15}));}
 function setMain(m){curM=m;if(m!=='trip')map.closePopup();document.querySelectorAll('.mtab').forEach(function(e){e.classList.toggle('on',e.dataset.m===m);});
  document.querySelectorAll('.pane').forEach(function(e){e.classList.toggle('on',e.id==='p-'+m);});
@@ -1048,7 +1101,7 @@ function setMain(m){curM=m;if(m!=='trip')map.closePopup();document.querySelector
  document.getElementById('body').scrollTop=0;}
 document.querySelectorAll('.dtab').forEach(function(e){e.onclick=function(){var d=e.dataset.d;show(isNaN(+d)?d:+d);document.getElementById('body').scrollTop=0;};});
 document.querySelectorAll('.mtab').forEach(function(e){e.onclick=function(){setMain(e.dataset.m);};});
-document.getElementById('body').addEventListener('click',function(ev){var t=ev.target.closest('[data-poi],[data-leg],[data-sa],[data-go],[data-camp]');if(!t)return;
+document.getElementById('body').addEventListener('click',function(ev){var cs=ev.target.closest('[data-csort]');if(cs){campSort=cs.dataset.csort;var el=document.getElementById('campcmp');if(el)el.outerHTML=campTable();return;}var t=ev.target.closest('[data-poi],[data-leg],[data-sa],[data-go],[data-camp]');if(!t)return;
  if(t.dataset.go){var d=t.dataset.go;show(isNaN(+d)?d:+d);return;}
  if(t.dataset.poi){var k=t.dataset.poi,m=PM[k];if(k==='H18'||k==='back'){var dd=k==='H18'?18:19;if(!map.hasLayer(G[dd]))show(dd,false);}
   if(isMob())setSheet('peek');map.setView(m.getLatLng(),Math.max(map.getZoom(),k==='hz'?11:15),{animate:true});setTimeout(function(){m.openPopup();},350);}
